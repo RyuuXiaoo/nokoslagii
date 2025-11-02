@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auto Order Panel</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🛍️ Auto Order Panel</h1>
+    <p>Produk realtime dari <code>produk.json</code> & stok dari <code>stok.json</code></p>
+  </header>
+
+  <main>
+    <section id="produk" class="grid"></section>
+    <section id="checkout" class="card hidden">
+      <h2>Pembayaran</h2>
+      <div id="checkout-body"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Auto Order</small>
+  </footer>
+</body>
+</html>
