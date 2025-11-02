@@ -1,0 +1,20 @@
+[
+  {
+    "id": "netflix",
+    "name": "Netflix Premium",
+    "desc": "Akun Netflix 4K share slot",
+    "snk": "Garansi login 1x 24 jam",
+    "price": 25000,
+    "profit": 2000,
+    "terjual": 0
+  },
+  {
+    "id": "mlbb",
+    "name": "Mobile Legends",
+    "desc": "Akun ML siap main",
+    "snk": "Garansi login 12 jam",
+    "price": 15000,
+    "profit": 1500,
+    "terjual": 0
+  }
+]

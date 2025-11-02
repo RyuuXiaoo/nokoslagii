@@ -1,0 +1,10 @@
+{
+  "netflix": [
+    "net1@gmail.com|pass123|profilA|-|-",
+    "net2@gmail.com|pass456|profilB|-|-"
+  ],
+  "mlbb": [
+    "ml1@gmail.com|passml1|-|-|-",
+    "ml2@gmail.com|passml2|-|-|-"
+  ]
+}

@@ -1,19 +1,33 @@
-# Nokos Order Web (QRIS + OTP Auto)
+# Auto Order Web + QRIS Atlantic
 
-## Cara cepat
-1. Backend
-```bash
-cd server
-cp .env.example .env    # edit API key JasaOTP & Atlantic
-npm i
-npm run dev
-```
-2. Frontend
-- Buka `web/index.html` dengan Live Server (VSCode) atau serahkan ke hosting statis.
-- Pastikan `API_BASE` di `web/app.jsx` mengarah ke URL backend kamu.
+Panel web sederhana untuk jual akun/produk digital berbasis file lokal (`produk.json` & `stok.json`) dengan pembayaran QRIS (Atlantic H2H).
 
 ## Fitur
-- Pilih Negara → Layanan → Operator.
-- Beli → Loading → QRIS otomatis muncul bila saldo kurang.
-- Setelah dibayar, backend otomatis commit order, polling OTP, dan push status.
-- Riwayat pesanan: pending/success/failed + OTP tampil.
+- Daftar produk & stok otomatis dari JSON
+- Generate QRIS pembayaran (qrisfast) via Atlantic
+- Cek status pembayaran
+- Auto deliver akun & kurangi stok ketika sukses
+- Rekap sederhana (rekapan.json)
+
+## Setup
+1. Ekstrak project, lalu install dependency:
+   ```bash
+   npm install
+   ```
+
+2. Set API key Atlantic (wajib):
+   ```bash
+   export ATLANTIC_API_KEY=ISI_APIKEY
+   # Windows (Powershell): $env:ATLANTIC_API_KEY='ISI_APIKEY'
+   ```
+
+3. Jalankan:
+   ```bash
+   npm start
+   # buka http://localhost:3000
+   ```
+
+## Struktur Data
+- `produk.json` (array produk)
+- `stok.json` (object: { [idProduk]: string[] } dengan format `email|password|profil|pin|2fa`)
+
